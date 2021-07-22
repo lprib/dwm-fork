@@ -1,3 +1,4 @@
 tags
 *.o
 dwm
+dwm-msg
