@@ -21,7 +21,7 @@ static char selbordercolor[]        = "#005577";
 static char selbgcolor[]            = "#005577";
 
 static char normbgcolor_resource[]     = "dwm.darkBg";
-static char normbordercolor_resource[] = "dwm.darkBg";
+static char normbordercolor_resource[] = "dwm.darkSubtleHighlightedBg";
 static char normfgcolor_resource[]     = "dwm.darkText";
 static char selfgcolor_resource[]      = "dwm.lightBg";
 static char selbordercolor_resource[]  = "dwm.lightBg";
@@ -75,6 +75,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "start-rofi", "-show", "run" };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *exitcmd[]  = { "exit-dwm" };
+static const char *quickcmd[] = { "alacritty", "-e", "quick-open" };
 
 // warp cursor when changing monitors
 #define CURSOR_WARP_MONITOR
@@ -85,6 +86,7 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_o,      spawn,          {.v = quickcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
