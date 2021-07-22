@@ -76,6 +76,11 @@ static const char *dmenucmd[] = { "start-rofi", "-show", "run" };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *exitcmd[]  = { "exit-dwm" };
 
+// warp cursor when changing monitors
+#define CURSOR_WARP_MONITOR
+// warp cursor when changing windows on a single monitor
+#define CURSOR_WARP_FOCUS
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
