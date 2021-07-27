@@ -2,3 +2,5 @@ tags
 *.o
 dwm
 dwm-msg
+compile_commands.json
+.cache/
