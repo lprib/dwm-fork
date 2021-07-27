@@ -35,7 +35,7 @@ static char *colors[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "Music" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -75,7 +75,6 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "start-rofi", "-show", "run" };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *exitcmd[]  = { "exit-dwm" };
-static const char *quickcmd[] = { "alacritty", "-e", "quick-open" };
 
 // warp cursor when changing monitors
 #define CURSOR_WARP_MONITOR
@@ -86,7 +85,6 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_o,      spawn,          {.v = quickcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
